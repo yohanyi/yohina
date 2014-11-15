@@ -20,8 +20,14 @@ ActiveRecord::Schema.define(version: 20141115085144) do
     t.string   "name"
     t.string   "description"
     t.string   "link"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "gifts_users", force: true do |t|
+    t.integer "user_id"
+    t.integer "gift_id"
   end
 
   create_table "users", force: true do |t|

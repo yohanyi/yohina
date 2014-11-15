@@ -1,1 +1,10 @@
-<h1>HELLO WORLD</h1>
+<% if user_signed_in? %>
+  "hello world"
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
