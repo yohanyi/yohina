@@ -4,6 +4,7 @@ class CreateGifts < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :link
+      t.belongs_to :user
       t.timestamps
     end
   end
