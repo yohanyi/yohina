@@ -1,4 +1,4 @@
-class UsersGifts < ActiveRecord::Migration
+class CreateUsersGiftsJoinTable < ActiveRecord::Migration
   def change
     create_table :users_gifts, id: false do |t|
       t.belongs_to :user
